@@ -1,38 +1,44 @@
-# sv
+# ChatbotOS Frontend
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Interface utilisateur pour ChatbotOS, un chatbot émotionnel développé avec Svelte.
 
-## Creating a project
+## À propos
 
-If you're seeing this, you've probably already done this step. Congrats!
+ChatbotOS est un chatbot capable d'analyser et d'adapter son ton en fonction des émotions détectées dans les messages des utilisateurs. Cette interface frontend communique avec le [backend ChatbotOS](https://github.com/jessicakuijer/chatbotos-back) qui traite les messages et retourne des réponses avec un score émotionnel.
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Fonctionnalités
 
-# create a new project in my-app
-npx sv create my-app
-```
+- Interface de chat moderne et réactive
+- Adaptation du ton en fonction des émotions détectées
+- Affichage du score émotionnel des messages
+- Persistance des conversations via localStorage
+- Design responsive compatible mobile
 
-## Developing
+## Développement
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Une fois les dépendances installées avec `npm install`, démarrez le serveur de développement :
 
 ```bash
 npm run dev
 
-# or start the server and open the app in a new browser tab
+# ou pour ouvrir automatiquement dans le navigateur
 npm run dev -- --open
 ```
 
-## Building
+## Configuration
 
-To create a production version of your app:
+Le frontend communique par défaut avec l'API backend à l'adresse `http://127.0.0.1:8000/api/chat`. Pour modifier cette URL, consultez le fichier `src/lib/stores/chatStore.js`.
+
+## Compilation
+
+Pour créer une version de production :
 
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+Vous pouvez prévisualiser la version de production avec `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Backend
+
+Le backend est disponible dans un dépôt séparé : [https://github.com/jessicakuijer/chatbotos-back](https://github.com/jessicakuijer/chatbotos-back)
